@@ -74,6 +74,9 @@ class Battleship:
 
 
     def count_hit_ships(self):
+        """
+        Counts number of hit ships in the game.
+        """
         hit_ships = 0
         for row in self.board:
             for column in row:
