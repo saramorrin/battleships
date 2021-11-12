@@ -21,7 +21,7 @@ def welcome_message():
     """
     print(welcome_message_str)
     player_name = input("Please enter your name Captain: ")
-    print("")
+    print(f"Ahoy! Captain {player_name} \n")
     # TODO put validation on name here, cannot be blank
 
 
@@ -156,7 +156,7 @@ class Battleship:
             print("TURN EVENT:")
             # Check if a hit / miss
             if self.hidden_computer_board[player_row_guess][player_col_guess] == "S":
-                print("Excellent shot Captain, you sunk 1 ship!")
+                print(" Excellent shot Captain, you sunk 1 ship!")
                 self.hidden_computer_board[player_row_guess][player_col_guess] = "X"
                 self.visible_computer_board[player_row_guess][player_col_guess] = "X"
                 self.player_score += 1
@@ -209,12 +209,14 @@ def play_again():
     Asks player if they wish to play again or quit
     """
     print("Would you like to play again?")
-    answer = input("Enter Y or N: \n").upper()
-    print("")
     while True: 
+        answer = input("Enter Y or N: \n").upper()
+        print("")
+    
         if answer == "Y":
             new_game()
         elif answer =="N":
+            global game_running
             game_running = False
             print("")
             print("Thanks for playing me matey!")
