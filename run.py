@@ -21,12 +21,12 @@ def welcome_message():
     """
     print(welcome_message_str)
     while True:
-        player_name = input("Please enter your name Captain: ")
+        player_name = input("\033[1;32;40mPlease enter your name Captain: ")
         if player_name.isalpha():
             break
         print("Oi Matey! Captain's name only, enter characters A-Z \n")
 
-    print(f"Ahoy! Captain {player_name} \n")
+    print(f"Ahoy! Captain {player_name} \033[0;0m \n")
     
 
 class GameBoard:
@@ -56,6 +56,7 @@ class GameBoard:
           print("%d|%s|" % (row_number, "|".join(row)))
           print("----------")
           row_number += 1
+          
 
 
 class Battleship:
