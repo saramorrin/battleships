@@ -20,10 +20,14 @@ def welcome_message():
     will display each time a new game begins.
     """
     print(welcome_message_str)
-    player_name = input("Please enter your name Captain: ")
-    print(f"Ahoy! Captain {player_name} \n")
-    # TODO put validation on name here, cannot be blank
+    while True:
+        player_name = input("Please enter your name Captain: ")
+        if player_name.isalpha():
+            break
+        print("Oi Matey! Captain's name only, enter characters A-Z \n")
 
+    print(f"Ahoy! Captain {player_name} \n")
+    
 
 class GameBoard:
     """
