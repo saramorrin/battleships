@@ -21,7 +21,7 @@ def welcome_message():
     """
     print(welcome_message_str)
     while True:
-        player_name = input("\033[1;32;40mPlease enter your name Captain: ")
+        player_name = input("\033[1;35;40mPlease enter your name Captain: ")
         if player_name.isalpha():
             break
         print("Oi Matey! Captain's name only, enter characters A-Z \n")
@@ -111,7 +111,7 @@ class Battleship:
         # Ask to guess column
         column = input("Enter the column letter of the ship between A-D: ").upper()
         while column not in ["A", "B", "C", "D"]:
-            print("Uh oh, you must enter a letter between A-D\n")
+            print("\033[1;35;40mUh oh, you must enter a letter between A-D\033[0;0m\n")
             column = input("Enter the column letter of the ship between A-D: ").upper()
 
         print("")
@@ -119,8 +119,8 @@ class Battleship:
         # Ask to guess row
         row = input("Enter the row of the ship between 1-4: ")
         while row not in ["1", "2", "3", "4"]:
-            print("Uh oh, you must enter a value between 1-4\n")
-            row = input("Enter the row of the ship between 1-4: ")
+            print("\033[1;35;40mUh oh, you must enter a value between 1-4\033[0;0m\n")
+            row = input("Enter the row of the ship between 1-4:  ")
 
         return row, column
 
@@ -153,7 +153,7 @@ class Battleship:
                     player_col_guess
                 )
                 if self.visible_computer_board[player_row_guess][player_col_guess] in ["X", "O"]:
-                    print("Shiver me timbers, you have already guessed this position!\n")
+                    print("\033[1;35;40mShiver me timbers, you have already guessed this position!\033[0;0m \n")
                     continue
                 break
             print("")
@@ -161,12 +161,12 @@ class Battleship:
             print("TURN EVENT:")
             # Check if a hit / miss
             if self.hidden_computer_board[player_row_guess][player_col_guess] == "S":
-                print(" Excellent shot Captain, you sunk 1 ship!")
+                print("\033[1;36;40mExcellent shot Captain, you sunk 1 ship!\033[0;0m ")
                 self.hidden_computer_board[player_row_guess][player_col_guess] = "X"
                 self.visible_computer_board[player_row_guess][player_col_guess] = "X"
                 self.player_score += 1
             else:
-                print("It's a miss, try again Captain!")
+                print("\033[1;31;40mIt's a miss, try again Captain!\033[0;0m ")
                 self.hidden_computer_board[player_row_guess][player_col_guess] = "O"
                 self.visible_computer_board[player_row_guess][player_col_guess] = "O"
 
@@ -181,11 +181,11 @@ class Battleship:
             
             # Check if a hit / miss
             if self.player_board[computer_row_guess][computer_row_guess] == "S":
-                print("Batten down the hatches, the computer sunk one of your ships!")
+                print("\033[1;31;40mBatten down the hatches, the computer sunk one of your ships!\033[0;0m ")
                 self.player_board[computer_row_guess][computer_row_guess] = "X"
                 self.computer_score += 1
             else:
-                print("The computer missed!")
+                print("\033[1;36;40mYo Ho Ho Me Hearties, the computer missed!\033[0;0m ")
                 self.player_board[computer_row_guess][computer_row_guess] = "O"
 
 
@@ -193,29 +193,29 @@ class Battleship:
                 self.computer_score == number_of_ships and
                 self.player_score == number_of_ships
             ):
-                print("Yo ho ho, It is a draw!")
+                print("\033[1;36;40mYo ho ho, It is a draw!\033[0;0m ")
                 return None
 
             if self.player_score == number_of_ships:
-                print("Blow me down! You won Captain!")
+                print("\033[1;36;40mBlow me down! You won Captain!\033[0;0m ")
                 return None
 
             if self.computer_score == number_of_ships:
-                print("Aaaarrrrgggghhhh! The computer won!\n")
+                print("\033[1;31;40mAaaarrrrgggghhhh! The computer won!\033[0;0m \n")
                 return None
 
             turns += 1
             print("")
 
-        print("Captain you have run out of turns, it's a draw!\n")
+        print("\033[1;35;40mCaptain you have run out of turns, it's a draw!\033[0;0m \n")
 
 def play_again():
     """
     Asks player if they wish to play again or quit
     """
-    print("Would you like to play again?")
+    print("\033[1;35;40mWould you like to play again?")
     while True: 
-        answer = input("Enter Y or N: \n").upper()
+        answer = input("Enter Y or N: \n\033[0;0m ").upper()
         print("")
     
         if answer == "Y":
@@ -224,7 +224,7 @@ def play_again():
             global game_running
             game_running = False
             print("")
-            print("Thanks for playing me matey!")
+            print("\033[1;35;40mThanks for playing me matey!\033[0;0m ")
             break
         #else:
             #print("")
