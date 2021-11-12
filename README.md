@@ -1,31 +1,115 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome saramorrin,
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+# Rock, Paper, Scissors, Lizard, Spock
 
-## Reminders
+Welcome to my Rock, Paper, Scissors, Lizard, Spock game.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+Most people are familiar with the basic Rock, Paper, Scissors game, but not everyone has heard of the Rock, Paper, Scissors, Lizard, Spock game. This version of the game originated from the TV show, Big Bang Theory. This game adds 2 extra options, Lizard and Spock. The addition of these options changes the dynamic of the game providing the player with more variety and opportunity to win (and lose).
 
-## Creating the Heroku app
+This project uses the programming languages of HTML5, CSS and Javascript.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+A live website can be found [here](https://saramorrin.github.io/rock-paper-scissors-lizard-spock/)
 
-1. `heroku/python`
-2. `heroku/nodejs`
+![Website Preview](assets/images.readme/responsive.jpeg)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+# Site Design Considerations
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### User Expectations
+- The game should be engaging for the player and clearly display a winner and a loser
 
-Connect your GitHub repository and deploy as normal.
 
-## Constraints
+## Colour Scheme and Font
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+ 
 
------
-Happy coding!
+## Site Skeleton
+
+[Balsamiq](https://balsamiq.com/) was used to create wireframes of the website. This was very useful as it gives the template of the UI. Wireframes were designed for web browser, table and a mobile browser format. 
+
+![Balsamiq Desktop Image](assets/images.readme/desktop.jpeg)
+
+
+
+# Features
+
+### Game Page
+
+
+![Title & Choices](assets/images.readme/choices.jpeg)
+
+
+
+### How To Play Button
+- This button opens up a popup modal
+- This outlines the rules of the game for players
+- It also includes a video from the TV show "The Big Bang Theory" where the idea of the game first appeared
+
+![How To Play Button](assets/images.readme/how-to-play-button.jpeg)
+
+### Contact Button
+
+
+
+
+
+
+
+
+# Manual Testing
+
+
+
+# Validator Testing
+## HTML
+
+
+
+
+
+
+
+# Development Cycle
+
+There were some elements I amended, re-positioned and added from my original wireframes as they were more visually appealing and also made the game more responsive across all devices.
+
+I also decided to include an additional button of 'Play Again' to allow the game to be reset after a winner has been declared.
+
+# Bugs
+
+
+
+# Deployment
+
+To deploy my final project to the cloud I used Heroku. To do this I had to:
+
+1. Push the latest code to GitHub.
+2. Go to Heroku.
+3. Select new in the top right corner.
+4. Create new app.
+5. Enter the app name and select Europe as the region.
+6. Connect to GitHub.
+7. Search for repo-name.
+8. Select connect to the relevant repo you want to deploy.
+9. Select the settings tab.
+10. Go to Config Vars and add PORT 8000.
+11. Add buildpack.
+12. Select Python, then save changes.
+13. Select Nodejs, then save changes.
+14. Make sure that they are in this order, Heroku/Python is at top followed by Heroku/Nodejs.
+15. Navigate to the deploy tab.
+16. Scroll down to Automatic Deploys and select. 
+17. Go to Manual Deploy and select deploy branch.
+
+
+The live link can be found here - (https://battleships-saramorrin.herokuapp.com/)
+
+# Credits
+
+
+# Media
+
+ 
+ 
+  
+
+

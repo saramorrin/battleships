@@ -3,6 +3,7 @@ import random
 # Global variables here
 player_name = None
 number_of_ships = 4
+game_running = True
 welcome_message_str = f"""
 Welcome to Battleships
 You have {number_of_ships} pirate ships to sink
@@ -210,10 +211,11 @@ def play_again():
     print("Would you like to play again?")
     answer = input("Enter Y or N: \n").upper()
     print("")
-    while True:
+    while game_running: 
         if answer == "Y":
             new_game()
         elif answer =="N":
+            game_running = False
             print("")
             print("Thanks for playing me matey!")
             break
