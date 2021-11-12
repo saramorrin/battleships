@@ -1,16 +1,16 @@
 
 
-# Rock, Paper, Scissors, Lizard, Spock
+# Battleships
 
-Welcome to my Rock, Paper, Scissors, Lizard, Spock game.
+Welcome to my Battleships game.
 
 Most people are familiar with the basic Rock, Paper, Scissors game, but not everyone has heard of the Rock, Paper, Scissors, Lizard, Spock game. This version of the game originated from the TV show, Big Bang Theory. This game adds 2 extra options, Lizard and Spock. The addition of these options changes the dynamic of the game providing the player with more variety and opportunity to win (and lose).
 
 This project uses the programming languages of HTML5, CSS and Javascript.
 
-A live website can be found [here](https://saramorrin.github.io/rock-paper-scissors-lizard-spock/)
+A live website can be found [here](https://battleships-saramorrin.herokuapp.com/)
 
-![Website Preview](assets/images.readme/responsive.jpeg)
+![Website Preview](readme.images/landing-page-image.jpg)
 
 # Site Design Considerations
 
@@ -24,9 +24,9 @@ A live website can be found [here](https://saramorrin.github.io/rock-paper-sciss
 
 ## Site Skeleton
 
-[Balsamiq](https://balsamiq.com/) was used to create wireframes of the website. This was very useful as it gives the template of the UI. Wireframes were designed for web browser, table and a mobile browser format. 
+[Lucidchart](https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier1_mixed_search_brand_exact_&km_CPC_CampaignId=1490375427&km_CPC_AdGroupID=55688909257&km_CPC_Keyword=lucid%20charts&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=354596043016&km_CPC_TargetID=aud-381457345638:kwd-64262996435&km_CPC_Country=9046037&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&mkwid=stwZuDiXw_pcrid_354596043016_pkw_lucid%20charts_pmt_e_pdv_c_slid__pgrid_55688909257_ptaid_aud-381457345638:kwd-64262996435_&gclid=CjwKCAiAvriMBhAuEiwA8Cs5lRQJUbG5hAH-eB-fciVZRNMyF54zxhvCSdxGAviSsT3Nd-KnrvdxARoCln4QAvD_BwE) was used to help create a flow chart diagram for the game. It was useful as it enabled me to clearly play out all the logic and possible sernarios to plan for the game 
 
-![Balsamiq Desktop Image](assets/images.readme/desktop.jpeg)
+![Lucid Chart Image](readme.images/wireframe.jpeg)
 
 
 
@@ -35,16 +35,12 @@ A live website can be found [here](https://saramorrin.github.io/rock-paper-sciss
 ### Game Page
 
 
-![Title & Choices](assets/images.readme/choices.jpeg)
+
 
 
 
 ### How To Play Button
-- This button opens up a popup modal
-- This outlines the rules of the game for players
-- It also includes a video from the TV show "The Big Bang Theory" where the idea of the game first appeared
 
-![How To Play Button](assets/images.readme/how-to-play-button.jpeg)
 
 ### Contact Button
 
@@ -106,7 +102,7 @@ The live link can be found here - (https://battleships-saramorrin.herokuapp.com/
 # Credits
 
 
-# Media
+
 
  
  

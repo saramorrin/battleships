@@ -211,7 +211,7 @@ def play_again():
     print("Would you like to play again?")
     answer = input("Enter Y or N: \n").upper()
     print("")
-    while game_running: 
+    while True: 
         if answer == "Y":
             new_game()
         elif answer =="N":
@@ -228,7 +228,7 @@ def play_again():
 def new_game():
     #Welcome message to the user
     welcome_message()
-    while True:
+    while game_running:
         #Initialise the battleship game
         bs = Battleship()
         bs.run_game()
@@ -236,8 +236,8 @@ def new_game():
          #Would you like to play again
         #confirm = input()
         #if confirm == "N":
-        #    print("Thanks for playing me matey")
-         #   break
+            #print("Thanks for playing me matey")
+            #break
 
         play_again()
 
