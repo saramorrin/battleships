@@ -168,7 +168,7 @@ class Battleship:
             while True:
                 computer_row_guess = random.randint(0, 3)
                 computer_col_guess = random.randint(0, 3)
-                if self.player_board[computer_row_guess][computer_col_guess] in ["X", "O"]:
+                if self.hidden_computer_board[computer_row_guess][computer_col_guess] in ["X", "O"]:
                     continue
                 break
             print("")
@@ -195,28 +195,49 @@ class Battleship:
                 return None
 
             if self.computer_score == number_of_ships:
-                print("Aaaarrrrgggghhhh! The computer won!")
+                print("Aaaarrrrgggghhhh! The computer won!\n")
                 return None
 
             turns += 1
             print("")
 
-        print("Captain you have run out of turns, it's a draw!")
+        print("Captain you have run out of turns, it's a draw!\n")
 
+def play_again():
+    """
+    Asks player if they wish to play again or quit
+    """
+    print("Would you like to play again?")
+    answer = input("Enter Y or N: \n").upper()
+    print("")
+    while True:
+        if answer == "Y":
+            new_game()
+        elif answer =="N":
+            print("")
+            print("Thanks for playing me matey!")
+            break
+        #else:
+            #print("")
+            #print("Please enter Y or N")
+            #answer = input("Enter Y or N: \n").upper()
 
+            
 def new_game():
-    # Welcome message to the user
+    #Welcome message to the user
     welcome_message()
     while True:
-        # Initialise the battleship game
+        #Initialise the battleship game
         bs = Battleship()
         bs.run_game()
 
-        # Would you like to play again
-        confirm = input()
-        if confirm == "N":
-            print("Thanks for playing me matey")
-            break
+         #Would you like to play again
+        #confirm = input()
+        #if confirm == "N":
+        #    print("Thanks for playing me matey")
+         #   break
 
-# Entry point to the game
+        play_again()
+
+#Entry point to the game
 new_game()
