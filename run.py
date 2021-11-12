@@ -174,13 +174,13 @@ class Battleship:
             print("")
             
             # Check if a hit / miss
-            if self.player_board[player_row_guess][player_col_guess] == "S":
+            if self.player_board[computer_row_guess][computer_row_guess] == "S":
                 print("Batten down the hatches, the computer sunk one of your ships!")
-                self.player_board[player_row_guess][player_col_guess] = "X"
+                self.player_board[computer_row_guess][computer_row_guess] = "X"
                 self.computer_score += 1
             else:
                 print("The computer missed!")
-                self.player_board[player_row_guess][player_col_guess] = "O"
+                self.player_board[computer_row_guess][computer_row_guess] = "O"
 
 
             if (
