@@ -147,7 +147,7 @@ class Battleship:
                     player_col_guess
                 )
                 if self.visible_computer_board[player_row_guess][player_col_guess] in ["X", "O"]:
-                    print("You have already guessed this position!\n")
+                    print("Shiver me timbers, you have already guessed this position!\n")
                     continue
                 break
             print("")
@@ -175,7 +175,7 @@ class Battleship:
             
             # Check if a hit / miss
             if self.player_board[player_row_guess][player_col_guess] == "S":
-                print("The computer sunk one of your ships!")
+                print("Batten down the hatches, the computer sunk one of your ships!")
                 self.player_board[player_row_guess][player_col_guess] = "X"
                 self.computer_score += 1
             else:
@@ -187,21 +187,21 @@ class Battleship:
                 self.computer_score == number_of_ships and
                 self.player_score == number_of_ships
             ):
-                print("It is a draw!")
+                print("Yo ho ho, It is a draw!")
                 return None
 
             if self.player_score == number_of_ships:
-                print("You one oh Captain!")
+                print("Blow me down! You won Captain!")
                 return None
 
             if self.computer_score == number_of_ships:
-                print("The computer won!")
+                print("Aaaarrrrgggghhhh! The computer won!")
                 return None
 
             turns += 1
             print("")
 
-        print("You have run out of turns, it's a draw!")
+        print("Captain you have run out of turns, it's a draw!")
 
 
 def new_game():
@@ -215,7 +215,7 @@ def new_game():
         # Would you like to play again
         confirm = input()
         if confirm == "N":
-            print("Thanks for playing")
+            print("Thanks for playing me matey")
             break
 
 # Entry point to the game
