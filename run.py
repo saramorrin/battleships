@@ -5,13 +5,16 @@ player_name = None
 number_of_ships = 4
 game_running = True
 welcome_message_str = f"""
-Welcome to Battleships
+Welcome to Pirate Battleships!
 You have {number_of_ships} pirate ships to sink
 
 Instructions:
 1) A hit is denoted as "X"
 2) A miss is denoted as "O"
 3) Your ship locations are denoted with an "S"
+4) Guess the location of all the computers ships to win
+5) Make sure you guess all the computers ships before they guess yours!
+6) You have 10 turns before you run out of guesses
 """
 
 
@@ -108,22 +111,22 @@ class Battleship:
         is valid.
         """
         # Ask to guess column
-        column = input("Enter the column letter of the ship "
-                       "between A-D: ").upper()
+        column = input("\033[1;35;10mEnter the column letter of the ship "
+                       "between A-D: \033[0;0m\n").upper()
         while column not in ["A", "B", "C", "D"]:
             print("\033[1;35;10mUh oh, you must enter a letter "
                   "between A-D\033[0;0m\n")
-            column = input("Enter the column letter of the ship "
-                           "between A-D: ").upper()
+            column = input("\033[1;35;10mEnter the column letter of the ship "
+                           "between A-D: \033[0;0m\n").upper()
 
         print("")
 
         # Ask to guess row
-        row = input("Enter the row of the ship between 1-4: ")
+        row = input("\033[1;35;10mEnter the row of the ship between 1-4: \033[0;0m\n ")
         while row not in ["1", "2", "3", "4"]:
             print("\033[1;35;10mUh oh, you must enter a value "
                   "between 1-4\033[0;0m\n")
-            row = input("Enter the row of the ship between 1-4:  ")
+            row = input("\033[1;35;10mEnter the row of the ship between 1-4: \033[0;0m\n ")
 
         return row, column
 
