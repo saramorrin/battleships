@@ -108,20 +108,21 @@ class Battleship:
         is valid.
         """
         # Ask to guess column
-        column = input("Enter the column letter of the ship\
-        between A-D: ").upper()
+        column = input("Enter the column letter of the ship "
+                       "between A-D: ").upper()
         while column not in ["A", "B", "C", "D"]:
-            print("\033[1;35;10mUh oh, you must enter a letter \
-                  between A-D\033[0;0m\n")
-            column = input("Enter the column letter of the ship \
-                           between A-D: ").upper()
+            print("\033[1;35;10mUh oh, you must enter a letter "
+                  "between A-D\033[0;0m\n")
+            column = input("Enter the column letter of the ship "
+                           "between A-D: ").upper()
 
         print("")
 
         # Ask to guess row
         row = input("Enter the row of the ship between 1-4: ")
         while row not in ["1", "2", "3", "4"]:
-            print("\033[1;35;10mUh oh, you must enter a value between 1-4\033[0;0m\n")
+            print("\033[1;35;10mUh oh, you must enter a value "
+                  "between 1-4\033[0;0m\n")
             row = input("Enter the row of the ship between 1-4:  ")
 
         return row, column
@@ -155,7 +156,8 @@ class Battleship:
                     player_col_guess
                 )
                 if self.visible_computer_board[player_row_guess][player_col_guess] in ["X", "O"]:
-                    print("\033[1;35;10mShiver me timbers, you have already guessed this position!\033[0;0m \n")
+                    print("\033[1;35;10mShiver me timbers, you have already "
+                          "guessed this position!\033[0;0m \n")
                     continue
                 break
             print("")
@@ -163,7 +165,8 @@ class Battleship:
             print("TURN EVENT:")
             # Check if a hit / miss
             if self.hidden_computer_board[player_row_guess][player_col_guess] == "S":
-                print("\033[1;36;10mExcellent shot Captain, you sunk 1 ship!\033[0;0m ")
+                print("\033[1;36;10mExcellent shot Captain, "
+                      "you sunk 1 ship!\033[0;0m ")
                 self.hidden_computer_board[player_row_guess][player_col_guess] = "X"
                 self.visible_computer_board[player_row_guess][player_col_guess] = "X"
                 self.player_score += 1
@@ -183,7 +186,8 @@ class Battleship:
 
             # Check if a hit / miss
             if self.player_board[computer_row_guess][computer_row_guess] == "S":
-                print("\033[1;31;10mBatten down the hatches, the computer sunk one of your ships!\033[0;0m ")
+                print("\033[1;31;10mBatten down the hatches, "
+                      "the computer sunk one of your ships!\033[0;0m ")
                 self.player_board[computer_row_guess][computer_row_guess] = "X"
                 self.computer_score += 1
             else:
