@@ -14,6 +14,7 @@ Instructions:
 3) Your ship locations are denoted with an "S"
 """
 
+
 def welcome_message():
     """
     Print statements used in the welcome message,
@@ -27,11 +28,11 @@ def welcome_message():
         print("Oi Matey! Captain's name only, enter characters A-Z \n")
 
     print(f"Ahoy! Captain {player_name} \033[0;0m \n")
-    
+
 
 class GameBoard:
     """
-    Create computer gameboard using letters 
+    Create computer gameboard using letters
     for x row and numbers for y row.
     """
     def __init__(self):
@@ -53,16 +54,15 @@ class GameBoard:
         print("----------")
         row_number = 1
         for row in board:
-          print("%d|%s|" % (row_number, "|".join(row)))
-          print("----------")
-          row_number += 1
-          
+            print("%d|%s|" % (row_number, "|".join(row)))
+            print("----------")
+            row_number += 1
 
 
 class Battleship:
     """
-    Create 4 ships on computer gameboard in randomly 
-    generated locations. These ships will be hidden 
+    Create 4 ships on computer gameboard in randomly
+    generated locations. These ships will be hidden
     from the player.
     """
     def __init__(self) -> None:
@@ -99,20 +99,22 @@ class Battleship:
                 self.hidden_computer_board[row][column] = "S"
                 break
 
-
     def get_user_input(self):
         """
         Requests player input of co-ordinates to guess location of a
-        computers ship. Allows for while loop to run to ensure that the 
-        data inputted is valid, error message will display to user if 
-        data is not valid. Loop will repeatedly request data until it 
+        computers ship. Allows for while loop to run to ensure that the
+        data inputted is valid, error message will display to user if
+        data is not valid. Loop will repeatedly request data until it
         is valid.
         """
         # Ask to guess column
-        column = input("Enter the column letter of the ship between A-D: ").upper()
+        column = input("Enter the column letter of the ship\
+        between A-D: ").upper()
         while column not in ["A", "B", "C", "D"]:
-            print("\033[1;35;10mUh oh, you must enter a letter between A-D\033[0;0m\n")
-            column = input("Enter the column letter of the ship between A-D: ").upper()
+            print("\033[1;35;10mUh oh, you must enter a letter \
+                  between A-D\033[0;0m\n")
+            column = input("Enter the column letter of the ship \
+                           between A-D: ").upper()
 
         print("")
 
@@ -178,7 +180,7 @@ class Battleship:
                     continue
                 break
             print("")
-            
+
             # Check if a hit / miss
             if self.player_board[computer_row_guess][computer_row_guess] == "S":
                 print("\033[1;31;10mBatten down the hatches, the computer sunk one of your ships!\033[0;0m ")
@@ -187,7 +189,6 @@ class Battleship:
             else:
                 print("\033[1;36;10mYo Ho Ho Me Hearties, the computer missed!\033[0;0m ")
                 self.player_board[computer_row_guess][computer_row_guess] = "O"
-
 
             if (
                 self.computer_score == number_of_ships and
@@ -207,46 +208,38 @@ class Battleship:
             turns += 1
             print("")
 
-        print("\033[1;35;10mCaptain you have run out of turns, it's a draw!\033[0;0m \n")
+        print("\033[1;35;10mCaptain you have run out of turns,\
+        it's a draw!\033[0;0m \n")
+
 
 def play_again():
     """
     Asks player if they wish to play again or quit
     """
     print("\033[1;35;10mWould you like to play again?")
-    while True: 
+    while True:
         answer = input("Enter Y or N: \n\033[0;0m ").upper()
         print("")
-    
+
         if answer == "Y":
             new_game()
-        elif answer =="N":
+        elif answer == "N":
             global game_running
             game_running = False
             print("")
             print("\033[1;35;10mThanks for playing me matey!\033[0;0m ")
             break
-        #else:
-            #print("")
-            #print("Please enter Y or N")
-            #answer = input("Enter Y or N: \n").upper()
 
-            
+
 def new_game():
-    #Welcome message to the user
+    # Welcome message to the user
     welcome_message()
     while game_running:
-        #Initialise the battleship game
+        # Initialise the battleship game
         bs = Battleship()
         bs.run_game()
 
-         #Would you like to play again
-        #confirm = input()
-        #if confirm == "N":
-            #print("Thanks for playing me matey")
-            #break
-
         play_again()
 
-#Entry point to the game
+# Entry point to the game
 new_game()
