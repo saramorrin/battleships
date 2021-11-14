@@ -33,48 +33,59 @@ I hoped that this would provide a slightly more interesting visual experience fo
 
 ![Lucid Chart Image](readme.images/wireframe.jpeg)
 
-
-
 # Features
 
-### Game Page
+# Technologies Used
+
+During the making of this game I used the following:
+
+* [GitHub](https://github.com/)
+
+    For storing project code written in gitpod
+
+* [Lucid Chart](https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier1_mixed_search_brand_exact_&km_CPC_CampaignId=1490375427&km_CPC_AdGroupID=55688909257&km_CPC_Keyword=lucid%20charts&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=442433236001&km_CPC_TargetID=aud-833150265254:kwd-64262996435&km_CPC_Country=9046037&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&mkwid=stwZuDiXw_pcrid_442433236001_pkw_lucid%20charts_pmt_e_pdv_c_slid__pgrid_55688909257_ptaid_aud-833150265254:kwd-64262996435_&gclid=Cj0KCQiAhMOMBhDhARIsAPVml-GVF5i9_SQNDYHlUyBuErwZNeow81cGS-C4QXOTa-0HEqhSFxWbm8EaAuclEALw_wcB)
+
+    For creating flow chart for game planning
+
+* [Replit](https://replit.com/~)
+
+    To test code for errors or problems
+
+* [PEP8 Validator](http://pep8online.com/)
+    
+    For checking python code best practices and validation
+
+* [Heroku](https://id.heroku.com/login)
+    
+    To deploy project into live environment
+
+# Testing
+
+Code was first tested using the PEP8 Online validator. No issues were found in the code as detailed in the screenshot below:
 
 
 
 
 
 
-### How To Play Button
-
-
-### Contact Button
 
 
 
 
-
-
-
-
-# Manual Testing
-
-
-
-# Validator Testing
-
-
-
-
-
-
-
-
-# Development Cycle
 
 
 
 # Bugs
 
+- When testing the game I noticed that the computer guess was mirroring the player input guess therefore not drawing a guess randomly. This was caused by the code checking whether the computer has hit or miss having the incorrect variables passed in for the array indices. It should have been computer row guess, rather than player row guess. This was corrected and code worked as expected.
+
+- During coding, an issue arose with the line length on certain lines. Upon checking the PEP8 guidelines, I discovered the 80 character advisory limit. Where possible, print statement strings were split with the use of double quotation marks to denote the continuation of the line.
+Backslashes were not used in string statements as this resulted in spacing errors on the displayed result. 
+
+- Upon adding colours I noticed that the background colour was displaying as a dark grey and not black as intended. This was resolved by changing the background colour from 40m to 10m.
+
+- When testing the game I found that the "Play Again" function was not working properly, the game would not let you exit, instead just looping back round to begin the game again. 
+This was corrected by breaking the while loop by adding a new global variant and setting this to true. Code then worked as expected.
 
 
 # Deployment
