@@ -40,6 +40,8 @@ I hoped that this would provide a slightly more interesting visual experience fo
 
 ![Game Play Image](readme.images/play-game-imagetwo.jpg)
 
+![Game Play Image](readme.images/play-game-imagethree.jpg)
+
 ![Game Play Image](readme.images/player-win.jpg)
 
 ![Game Play Image](readme.images/play-again.jpg)
@@ -88,6 +90,10 @@ For number inputs, fields were tested using numbers outside of the range, specia
 For same guess inputs, fields were tested using a guess which had already been inputed.
 
 ![Same Guess Validation](readme.images/same-guess-validation.jpg)
+
+For yes or no play again inputs, fields were tested using letters and numbers outside of the range, blamks and special characters inputs.
+
+![Yes / No Validation](readme.images/y-n-validation.jpg)
 
 
 
