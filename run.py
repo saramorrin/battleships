@@ -122,11 +122,13 @@ class Battleship:
         print("")
 
         # Ask to guess row
-        row = input("\033[1;35;10mEnter the row of the ship between 1-4: \033[0;0m\n ")
+        row = input("\033[1;35;10mEnter the row of the ship "
+                    "between 1-4: \033[0;0m\n ")
         while row not in ["1", "2", "3", "4"]:
             print("\033[1;35;10mUh oh, you must enter a value "
                   "between 1-4\033[0;0m\n")
-            row = input("\033[1;35;10mEnter the row of the ship between 1-4: \033[0;0m\n ")
+            row = input("\033[1;35;10mEnter the row of the ship "
+                        "between 1-4: \033[0;0m\n ")
 
         return row, column
 
@@ -138,10 +140,8 @@ class Battleship:
         self.create_ships()
         gb = GameBoard()
         # start 10 turns
-        # A hit is == X
-        # A miss is an == O
         turns = 1
-        while turns < 11:
+        while turns <= 10:
             print("Your board")
             gb.print_board(self.player_board)
 
@@ -158,7 +158,9 @@ class Battleship:
                 player_col_guess = gb.get_letters_to_numbers(
                     player_col_guess
                 )
-                if self.visible_computer_board[player_row_guess][player_col_guess] in ["X", "O"]:
+                if self.visible_computer_board[
+                    player_row_guess
+                ][player_col_guess] in ["X", "O"]:
                     print("\033[1;35;10mShiver me timbers, you have already "
                           "guessed this position!\033[0;0m \n")
                     continue
@@ -167,34 +169,49 @@ class Battleship:
 
             print("TURN EVENT:")
             # Check if a hit / miss
-            if self.hidden_computer_board[player_row_guess][player_col_guess] == "S":
+            if self.hidden_computer_board[
+                player_row_guess
+            ][player_col_guess] == "S":
                 print("\033[1;36;10mExcellent shot Captain, "
                       "you sunk 1 ship!\033[0;0m ")
-                self.hidden_computer_board[player_row_guess][player_col_guess] = "X"
-                self.visible_computer_board[player_row_guess][player_col_guess] = "X"
+                self.hidden_computer_board[
+                    player_row_guess
+                ][player_col_guess] = "X"
+                self.visible_computer_board[
+                    player_row_guess
+                ][player_col_guess] = "X"
                 self.player_score += 1
             else:
                 print("\033[1;31;10mIt's a miss, try again Captain!\033[0;0m ")
-                self.hidden_computer_board[player_row_guess][player_col_guess] = "O"
-                self.visible_computer_board[player_row_guess][player_col_guess] = "O"
+                self.hidden_computer_board[
+                    player_row_guess
+                ][player_col_guess] = "O"
+                self.visible_computer_board[
+                    player_row_guess
+                ][player_col_guess] = "O"
 
             # Computer guess
             while True:
                 computer_row_guess = random.randint(0, 3)
                 computer_col_guess = random.randint(0, 3)
-                if self.hidden_computer_board[computer_row_guess][computer_col_guess] in ["X", "O"]:
+                if self.hidden_computer_board[
+                    computer_row_guess
+                ][computer_col_guess] in ["X", "O"]:
                     continue
                 break
             print("")
 
             # Check if a hit / miss
-            if self.player_board[computer_row_guess][computer_row_guess] == "S":
+            if self.player_board[computer_row_guess][
+                computer_row_guess
+            ] == "S":
                 print("\033[1;31;10mBatten down the hatches, "
                       "the computer sunk one of your ships!\033[0;0m ")
                 self.player_board[computer_row_guess][computer_row_guess] = "X"
                 self.computer_score += 1
             else:
-                print("\033[1;36;10mYo Ho Ho Me Hearties, the computer missed!\033[0;0m ")
+                print("\033[1;36;10mYo Ho Ho Me Hearties, "
+                      "the computer missed!\033[0;0m ")
                 self.player_board[computer_row_guess][computer_row_guess] = "O"
 
             if (
@@ -209,7 +226,8 @@ class Battleship:
                 return None
 
             if self.computer_score == number_of_ships:
-                print("\033[1;31;10mAaaarrrrgggghhhh! The computer won!\033[0;0m \n")
+                print("\033[1;31;10mAaaarrrrgggghhhh! "
+                      "The computer won!\033[0;0m \n")
                 return None
 
             turns += 1
