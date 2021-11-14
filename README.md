@@ -4,9 +4,9 @@
 
 Welcome to my Battleships game.
 
-Most people are familiar with the basic Rock, Paper, Scissors game, but not everyone has heard of the Rock, Paper, Scissors, Lizard, Spock game. This version of the game originated from the TV show, Big Bang Theory. This game adds 2 extra options, Lizard and Spock. The addition of these options changes the dynamic of the game providing the player with more variety and opportunity to win (and lose).
+Battleships is a strategy type guessing game whereby two players attempt to destroy the opposing players fleet of ships. They do this by alternating guesses of the coordinates of the concealed ships set out on a grid. 
 
-This project uses the programming languages of HTML5, CSS and Javascript.
+This project uses the programming language of Python.
 
 A live website can be found [here](https://battleships-saramorrin.herokuapp.com/)
 
@@ -15,12 +15,17 @@ A live website can be found [here](https://battleships-saramorrin.herokuapp.com/
 # Site Design Considerations
 
 ### User Expectations
-- The game should be engaging for the player and clearly display a winner and a loser
+- The game should be engaging for the player and clearly display a winner and a loser after each turn.
 
 
 ## Colour Scheme and Font
 
- 
+To provide an improved user experience and a point of difference I decided to implement a colour scheme to the game.
+I hoped that this would provide a slightly more interesting visual experience for the player and also give a better definition to the functions when there are run.
+
+ - Player input requests and messages in Purple colour (\033[1;35;10m)
+ - Win messages in Cyan colour (\033[1;36;10m)
+ - Lose messages in Red colour(\033[1;31;10m)
 
 ## Site Skeleton
 
@@ -56,7 +61,7 @@ A live website can be found [here](https://battleships-saramorrin.herokuapp.com/
 
 
 # Validator Testing
-## HTML
+
 
 
 
@@ -66,9 +71,7 @@ A live website can be found [here](https://battleships-saramorrin.herokuapp.com/
 
 # Development Cycle
 
-There were some elements I amended, re-positioned and added from my original wireframes as they were more visually appealing and also made the game more responsive across all devices.
 
-I also decided to include an additional button of 'Play Again' to allow the game to be reset after a winner has been declared.
 
 # Bugs
 
