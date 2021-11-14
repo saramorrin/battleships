@@ -215,8 +215,8 @@ class Battleship:
             turns += 1
             print("")
 
-        print("\033[1;35;10mCaptain you have run out of turns,\
-        it's a draw!\033[0;0m \n")
+        print("\033[1;35;10mCaptain you have run out of turns, "
+              "it's a draw!\033[0;0m \n")
 
 
 def play_again():

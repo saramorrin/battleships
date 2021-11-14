@@ -10,7 +10,8 @@ This project uses the programming language of Python.
 
 A live website can be found [here](https://battleships-saramorrin.herokuapp.com/)
 
-![Website Preview](readme.images/landing-page-image.jpg)
+![Website Preview](readme.images/landing-page.jpg)
+![Website Preview](readme.images/play-game.jpg)
 
 # Site Design Considerations
 
@@ -34,6 +35,14 @@ I hoped that this would provide a slightly more interesting visual experience fo
 ![Lucid Chart Image](readme.images/wireframe.jpeg)
 
 # Features
+
+![Game Play Image](readme.images/game-play-imageone.jpg)
+
+![Game Play Image](readme.images/play-game-imagetwo.jpg)
+
+![Game Play Image](readme.images/player-win.jpg)
+
+![Game Play Image](readme.images/play-again.jpg)
 
 # Technologies Used
 
@@ -64,6 +73,21 @@ During the making of this game I used the following:
 Code was first tested using the PEP8 Online validator. No issues were found in the code as detailed in the screenshot below:
 
 
+For player name input, fields were tested using number, special characters and blank inputs.
+
+![Name Validation](readme.images/name-validation.jpg)
+
+For letter inputs, fields were tested using letters outside of the range, special characters, blank and number inputs.
+
+![Letter Validation](readme.images/letter-validation.jpg)
+
+For number inputs, fields were tested using numbers outside of the range, special characters, blank and letter inputs.
+
+![Number Validation](readme.images/number-validation.jpg)
+
+For same guess inputs, fields were tested using a guess which had already been inputed.
+
+![Same Guess Validation](readme.images/same-guess-validation.jpg)
 
 
 
