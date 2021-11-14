@@ -225,7 +225,7 @@ def play_again():
     """
     print("\033[1;35;10mWould you like to play again?")
     while True:
-        answer = input("\033[1;35;10Enter Y or N: \n\033[0;0m ").upper()
+        answer = input("\033[1;35;10mEnter Y or N: \n\033[0;0m ").upper()
         print("")
 
         if answer == "Y":
