@@ -6,7 +6,7 @@ Welcome to my Battleships game.
 
 Battleships is a strategy type guessing game whereby two players attempt to destroy the opposing players fleet of ships. They do this by alternating guesses of the coordinates of the concealed ships set out on a grid. 
 
-The object of this project was to build a game which could be inactive, where the player is able to play against the computer, obtain feedback on progress throughout the game and understand who has won and lost the game at the end.
+The object of this project was to build a game which could be interactive, where the player is able to play against the computer, obtain feedback on progress throughout the game and understand who has won and lost the game at the end.
 
 This project uses the programming language of Python.
 
