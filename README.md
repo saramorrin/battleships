@@ -6,6 +6,8 @@ Welcome to my Battleships game.
 
 Battleships is a strategy type guessing game whereby two players attempt to destroy the opposing players fleet of ships. They do this by alternating guesses of the coordinates of the concealed ships set out on a grid. 
 
+The object of this project was to build a game which could be inactive, where the player is able to play against the computer, obtain feedback on progress throughout the game and understand who has won and lost the game at the end.
+
 This project uses the programming language of Python.
 
 A live website can be found [here](https://battleships-saramorrin.herokuapp.com/)
@@ -13,11 +15,14 @@ A live website can be found [here](https://battleships-saramorrin.herokuapp.com/
 ![Website Preview](readme.images/landing-page.jpg)
 ![Website Preview](readme.images/play-game.jpg)
 
+
 # Site Design Considerations
 
 ### User Expectations
-- The game should be engaging for the player and clearly display a winner and a loser after each turn.
-
+- The game should be engaging for the player, providing fun and joy.
+- It should define a clear goal for the player.
+- It should clearly display a winner and a loser after each turn.
+- It should be challenging and give incentive to the player to want to return to play again.
 
 ## Colour Scheme and Font
 
@@ -30,29 +35,61 @@ I hoped that this would provide a slightly more interesting visual experience fo
 
 ## Site Skeleton
 
-[Lucidchart](https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier1_mixed_search_brand_exact_&km_CPC_CampaignId=1490375427&km_CPC_AdGroupID=55688909257&km_CPC_Keyword=lucid%20charts&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=354596043016&km_CPC_TargetID=aud-381457345638:kwd-64262996435&km_CPC_Country=9046037&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&mkwid=stwZuDiXw_pcrid_354596043016_pkw_lucid%20charts_pmt_e_pdv_c_slid__pgrid_55688909257_ptaid_aud-381457345638:kwd-64262996435_&gclid=CjwKCAiAvriMBhAuEiwA8Cs5lRQJUbG5hAH-eB-fciVZRNMyF54zxhvCSdxGAviSsT3Nd-KnrvdxARoCln4QAvD_BwE) was used to help create a flow chart diagram for the game. It was useful as it enabled me to clearly play out all the logic and possible sernarios to plan for the game 
+[Lucidchart](https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier1_mixed_search_brand_exact_&km_CPC_CampaignId=1490375427&km_CPC_AdGroupID=55688909257&km_CPC_Keyword=lucid%20charts&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=354596043016&km_CPC_TargetID=aud-381457345638:kwd-64262996435&km_CPC_Country=9046037&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&mkwid=stwZuDiXw_pcrid_354596043016_pkw_lucid%20charts_pmt_e_pdv_c_slid__pgrid_55688909257_ptaid_aud-381457345638:kwd-64262996435_&gclid=CjwKCAiAvriMBhAuEiwA8Cs5lRQJUbG5hAH-eB-fciVZRNMyF54zxhvCSdxGAviSsT3Nd-KnrvdxARoCln4QAvD_BwE) was used to help create a flow chart diagram for the game. It was useful as it enabled me to clearly play out all the logic and possible scenarios to plan for the game 
 
-![Lucid Chart Image](readme.images/wireframe.jpeg)
+![Lucid Chart Image](readme.images/wireframe.jpg)
+
 
 # Features
 
+Player welcome message and game instructions
+
+![Welcome Image](readme.images/welcome.jpg)
+
+Player board
+
+![Player Board Image](readme.images/player-board.jpg)
+
+Computer Board
+
+![Computer Board Image](readme.images/computer-board.jpg)
+
+Player sunk ship message
+
 ![Game Play Image](readme.images/game-play-imageone.jpg)
+
+Computer sunk ship message
 
 ![Game Play Image](readme.images/play-game-imagetwo.jpg)
 
-![Game Play Image](readme.images/play-game-imagethree.jpg)
+It's a draw message
+
+![Game Play Image](readme.images/play-game-imagethree.jpeg)
+
+Player winner message
 
 ![Game Play Image](readme.images/player-win.jpg)
 
+Play again message
+
 ![Game Play Image](readme.images/play-again.jpg)
+
 
 # Technologies Used
 
 During the making of this game I used the following:
 
+* [Python3](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+    Was the language used to create the game
+
 * [GitHub](https://github.com/)
 
     For storing project code written in gitpod
+
+* [GitPod](https://www.gitpod.io/)
+
+    For use as the code editor for the project code
 
 * [Lucid Chart](https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier1_mixed_search_brand_exact_&km_CPC_CampaignId=1490375427&km_CPC_AdGroupID=55688909257&km_CPC_Keyword=lucid%20charts&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=442433236001&km_CPC_TargetID=aud-833150265254:kwd-64262996435&km_CPC_Country=9046037&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&mkwid=stwZuDiXw_pcrid_442433236001_pkw_lucid%20charts_pmt_e_pdv_c_slid__pgrid_55688909257_ptaid_aud-833150265254:kwd-64262996435_&gclid=Cj0KCQiAhMOMBhDhARIsAPVml-GVF5i9_SQNDYHlUyBuErwZNeow81cGS-C4QXOTa-0HEqhSFxWbm8EaAuclEALw_wcB)
 
@@ -70,12 +107,18 @@ During the making of this game I used the following:
     
     To deploy project into live environment
 
+
 # Testing
 
-Code was first tested using the PEP8 Online validator. No issues were found in the code as detailed in the screenshot below:
+Code was first tested using the PEP8 Online validator. This threw up some errors with the length of certain lines within the code being too long as detailed below:
 
+![Pep8 Errors](readme.images/pep8-errors.jpg)
 
-For player name input, fields were tested using number, special characters and blank inputs.
+After this was corrected no further issues were found in the code as detailed in the screenshot below:
+
+![Pep8](readme.images/pep8.jpg)
+
+For player name input, fields were tested using numbers, special characters and blank inputs.
 
 ![Name Validation](readme.images/name-validation.jpg)
 
@@ -91,18 +134,14 @@ For same guess inputs, fields were tested using a guess which had already been i
 
 ![Same Guess Validation](readme.images/same-guess-validation.jpg)
 
-For yes or no play again inputs, fields were tested using letters and numbers outside of the range, blamks and special characters inputs.
+For yes or no play again inputs, fields were tested using letters and numbers outside of the range, blanks and special characters inputs.
 
 ![Yes / No Validation](readme.images/y-n-validation.jpg)
 
 
+# Developement
 
-
-
-
-
-
-
+I played the game incrementally throughout development to test the features and ensure that they responded how I expected. If a feature was not responding how I expected it to then I would go back and check the code to resolve the issue.
 
 
 # Bugs
@@ -143,8 +182,14 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 
 The live link can be found here - (https://battleships-saramorrin.herokuapp.com/)
 
+
 # Credits
 
+- An article on [Stack Abuse](https://stackabuse.com/how-to-print-colored-text-in-python/) helped me to understand how to implement colours into my code.
+
+- This article on [Real Python](https://realpython.com/python-pep8/) helped my understanding of how to write Python code following best practices and guidelines.
+
+- I used [Stack Overflow](https://stackoverflow.com/) to further my knowledge of classes and functions from previous questions asked by the community. 
 
 
 
